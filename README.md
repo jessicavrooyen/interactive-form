@@ -3,7 +3,6 @@
 Using the supplied HTML and CSS files, you'll add your own JavaScript to make the form more user-friendly by:
 
 - Add customized and contitional behaviour and interactivity. 
-
 - validating user input and providing helpful error messages when the user enters invalid information into the form fields. 
 
 ## Motivation
@@ -16,10 +15,9 @@ The benefits of using jQuery are:
 - A strong familiarity with jQuery will only make you a better developer since it enjoys a strong market share on the web
 
 ## Technology Used
-(Provided)
-- HTML
-- CSS
-(Created)
+- HTML (Provided)
+- CSS (Provided)
+
 - JavaScript
 - jQuery
 
