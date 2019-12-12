@@ -29,18 +29,13 @@ $($jobRoleTitle).change(function() {
 });
 
 /*  T-Shirt Section  */
-$selectTheme.attr('disabled', true); // hide 'select theme' 
-
-// hides 'Design' element's first property
-$design.on('change', function() {
-  $('#design :first').prop('hidden', true); 
-});
+$('#design option[id="select-theme"]').attr('disabled', true); // disable & hide 'select theme' 
 
 const $colorValue = $('<option>Please select a T-shirt theme</option>'); // updates 'Color' field input text
 $colorValue.attr('value', 'colorValue'); 
 $color.prepend($colorValue);
-$colorValue.attr('selected', true); // 'Color' option value is selected
-$colorValue.prop('hidden', true); // hides the above set 'Color' option value text
+$colorValue.attr('selected', true).prop('hidden', true);; // 'Color' option value is selected & hidden
+
 
 $color.attr('disabled', true); // 'Color' drop down menu is disabled
 
@@ -104,4 +99,22 @@ $('.activities').on('change', function (event) {
     }
   });
   console.log($cost);
+});
+
+/* Payment Section */
+$('#paypal, #bitcoin').hide(); //initially hide bitcoin and paypal
+$('#payment option[value="credit card"]').attr('selected', true); //select credit card by default
+$('#payment option[value="select method"]').attr('disabled', true).prop('hidden', true); // disable & hide select method 
+
+$('#payment').on('change', function() {
+  if ($(this).val() === 'paypal') {
+    $('#credit-card, #bitcoin').hide();
+    $('#paypal').show();
+  } else if ($(this).val() === 'bitcoin') {
+    $('#credit-card, #paypal').hide();
+    $('#bitcoin').show();
+  } else if ($(this).val() === 'credit card') {
+    $('#paypal, #bitcoin').hide();
+    $('#credit-card').show();
+  }
 });
