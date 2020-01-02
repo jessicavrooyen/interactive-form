@@ -14,6 +14,9 @@ The benefits of using jQuery are:
 - Help with cross-browser compatibility since jQuery deals with a lot of that stuff under the hood
 - A strong familiarity with jQuery will only make you a better developer since it enjoys a strong market share on the web
 
+
+Learn how to use Regular Expressions in JavaScript. Regular expressions can help validate forms, search and replace strings, and more. Regular expressions match patterns in strings. Pattern matching is a powerful too programs can use to "understand" the text users type in. 
+
 ## Technology Used
 - HTML (Provided)
 - CSS (Provided)
